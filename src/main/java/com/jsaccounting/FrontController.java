@@ -8,6 +8,6 @@ public class FrontController {
 
     @RequestMapping("/")
     public String toString() {
-        return "home";
+        return "front/index";
     }
 }
