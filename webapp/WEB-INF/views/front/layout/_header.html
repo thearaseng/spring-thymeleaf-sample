@@ -1,0 +1,65 @@
+<!-- page header -->
+<div class="page-header">
+
+    <!-- page header holder -->
+    <div class="page-header-holder">
+
+        <!-- page logo -->
+        <div class="logo">
+            <a th:href="/">Atlant - Front-end Template</a>
+        </div>
+        <!-- ./page logo -->
+
+        <!-- nav mobile bars -->
+        <div class="navigation-toggle">
+            <div class="navigation-toggle-button"><span class="fa fa-bars"></span></div>
+        </div>
+        <!-- ./nav mobile bars -->
+
+        <!-- navigation -->
+        <ul class="navigation">
+            <li>
+                <a th:th:href="@{/}">Home</a>
+            </li>
+            <li>
+                <a th:th:href="@{/about-us'}">About Us</a>
+            </li>
+            <li>
+                <a th:th:href="@{/our-service}">Our Service</a>
+            </li>
+            <li>
+                <a th:th:href="@{/news-and-events}">News & Events</a>
+            </li>
+            <li>
+                <a th:th:href="@{/contacts}">Contact</a>
+            </li>
+            <!--@if (Auth::check())-->
+            <!--<li>
+                <a th:th:href="#">Login as : <b>{{ auth()->user()->getDisplayName() }}</b></a>
+                <ul>
+                    <li><a th:th:href="#"><i class="fa fa-user" aria-hidden="true"></i> Profile</a></li>
+                    <li>
+                        <a th:th:href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><span class="fa fa-sign-out"></span> Sign Out</a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            {{ csrf_field() }}
+                        </form>
+                    </li>
+                </ul>
+            </li>-->
+            <!--@else-->
+            <li>
+                <a th:href="@{/login}"><span class="fa fa-sign-in"></span> Sign In</a>
+            </li>
+            <li>
+                <a th:href="@{/register}"><span class="fa fa-user"></span> Register</a>
+            </li>
+            @endif
+        </ul>
+        <!-- ./navigation -->
+
+
+    </div>
+    <!-- ./page header holder -->
+
+</div>
+<!-- ./page header -->

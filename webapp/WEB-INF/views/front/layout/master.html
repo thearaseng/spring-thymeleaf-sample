@@ -1,13 +1,59 @@
 <!DOCTYPE html>
-<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<html lang="en" class="body-full-height"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 
 <head>
+
+    <!-- META SECTION -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- END META SECTION -->
+
+    <!-- TODO : remove some unnecessary assets from master page -->
+    <link rel="stylesheet" type="text/css" th:href="@{/resources/css/front/revolution-slider/extralayers.css}" media="screen" />
+    <link rel="stylesheet" type="text/css" th:href="@{/resources/css/front/revolution-slider/settings.css}" media="screen" />
+
+    <link rel="stylesheet" type="text/css" th:href="@{/resources/css/front/styles.css}" media="screen" />
+
+    <!-- START YIELD STYLE -->
+    <!--@yield('meta-data')-->
+    <!-- END YIELD STYLE -->
 
 </head>
 
 <body>
 
-    <div layout:fragment="content"></div>
+    <!--<div layout:fragment="content"></div>-->
+
+    <!-- page container -->
+    <div class="page-container">
+
+        <!-- START INCLUDE HEADER -->
+        <!--<div th:replace="_header"></div>-->
+        <!-- END INCLUDE HEADER -->
+
+        <!-- START YIELD CONTENT -->
+        <div layout:fragment="content"></div>
+        <!-- END YIELD CONTENT -->
+
+        <!-- START INCLUDE FOOTER -->
+        <!--@include('/layouts/front/footer')-->
+        <!-- END INCLUDE FOOTER -->
+
+    </div>
+    <!-- ./page container -->
+
+    <!-- page scripts -->
+    <script type="text/javascript" th:src="@{/resources/js/front/plugins/jquery/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/js/front/plugins/bootstrap/bootstrap.min.js}"></script>
+
+    <script type="text/javascript" th:src="@{/resources/js/front/plugins/mixitup/jquery.mixitup.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/js/front/plugins/appear/jquery.appear.js}"></script>
+    <!-- ./page scripts -->
+
+    <div layout:fragment="script"></div>
 
 </body>
 
