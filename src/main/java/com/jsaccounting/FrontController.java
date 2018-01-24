@@ -1,4 +1,4 @@
-package com.js.tax.service;
+package com.jsaccounting;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -7,8 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class FrontController {
 
     @RequestMapping("/")
-    public String indexPage() {
+    public String toString() {
         return "home";
     }
-
 }
