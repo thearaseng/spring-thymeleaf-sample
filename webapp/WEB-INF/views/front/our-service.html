@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{front/layout/master}">
+<head>
+    <title>JS TAX SERVICE - ABOUT US</title>
+</head>
+<body>
+
+<!-- page content -->
+<div class="page-content" layout:fragment="content">
+
+    <!-- page content wrapper -->
+    <div class="page-content-wrap bg-light">
+        <!-- page content holder -->
+        <div class="page-content-holder no-padding">
+            <!-- page title -->
+            <div class="page-title">
+                <h1>Portfolio 2 Column</h1>
+                <!-- breadcrumbs -->
+                <ul class="breadcrumb">
+                    <li><a th:href="@{index.html}">Home</a></li>
+                    <li><a th:href="@{#}">Portfolio</a></li>
+                    <li class="active">Portfolio 2 Columnt</li>
+                </ul>
+                <!-- ./breadcrumbs -->
+            </div>
+            <!-- ./page title -->
+        </div>
+        <!-- ./page content holder -->
+    </div>
+    <!-- ./page content wrapper -->
+
+
+    <!-- page content wrapper -->
+    <div class="page-content-wrap">
+        <!-- page content holder -->
+        <div class="page-content-holder">
+
+            <div class="block-heading this-animate" data-animate="fadeIn">
+                <h2>This is an example of 4 column portfolio</h2>
+                <div class="block-heading-text">
+                    Donec sit amet elementum libero. Curabitur ut lorem id tellus malesuada tincidunt et eget purus. Cras molestie, velit quis viverra ultrices, tortor erat suscipit arcu, a ullamcorper neque lorem et massa. Praesent facilisis tellus nec rutrum luctus. Curabitur non venenatis metus, vitae rhoncus risus.
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 gallery-filter">
+                    <div class="button-panel">
+                        <button data-filter="all" class="btn btn-primary filter">All</button>
+                        <button data-filter=".cat_music" class="btn btn-primary filter">Music</button>
+                        <button data-filter=".cat_nature" class="btn btn-primary filter">Nature</button>
+                        <button data-filter=".cat_space" class="btn btn-primary filter">Space</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mix-grid thumbnails">
+                <div class="col-md-3 col-xs-3 mix cat_nature cat_all">
+                    <a class="thumbnail-item">
+                        <img th:src="@{/gallery/nature-1.jpg}" alt="Nature 1"/>
+                        <div class="thumbnail-info">
+                            <p>Curabitur ut lorem id tellus malesuada tincidunt et eget purus</p>
+                            <button class="btn btn-primary"><span class="fa fa-link"></span></button>
+                            <button class="btn btn-primary"><span class="fa fa-eye"></span></button>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-xs-3 mix cat_space cat_all">
+                    <a class="thumbnail-item">
+                        <img th:src="@{/gallery/space-1.jpg}" alt="Space 1"/>
+                        <div class="thumbnail-info">
+                            <p>Curabitur ut lorem id tellus malesuada tincidunt et eget purus</p>
+                            <button class="btn btn-primary"><span class="fa fa-link"></span></button>
+                            <button class="btn btn-primary"><span class="fa fa-eye"></span></button>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-xs-3 mix cat_nature cat_all">
+                    <a class="thumbnail-item">
+                        <img th:src="@{/gallery/nature-2.jpg}" alt="Nature 2"/>
+                        <div class="thumbnail-info">
+                            <p>Curabitur ut lorem id tellus malesuada tincidunt et eget purus</p>
+                            <button class="btn btn-primary"><span class="fa fa-link"></span></button>
+                            <button class="btn btn-primary"><span class="fa fa-eye"></span></button>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-xs-3 mix cat_music cat_all">
+                    <a class="thumbnail-item">
+                        <img th:src="@{/gallery/music-2.jpg}" alt="Music 2"/>
+                        <div class="thumbnail-info">
+                            <p>Curabitur ut lorem id tellus malesuada tincidunt et eget purus</p>
+                            <button class="btn btn-primary"><span class="fa fa-link"></span></button>
+                            <button class="btn btn-primary"><span class="fa fa-eye"></span></button>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-xs-3 mix cat_nature cat_all">
+                    <a class="thumbnail-item">
+                        <img th:src="@{/gallery/nature-3.jpg}" alt="Nature 3"/>
+                        <div class="thumbnail-info">
+                            <p>Curabitur ut lorem id tellus malesuada tincidunt et eget purus</p>
+                            <button class="btn btn-primary"><span class="fa fa-link"></span></button>
+                            <button class="btn btn-primary"><span class="fa fa-eye"></span></button>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-xs-3 mix cat_nature cat_all">
+                    <a class="thumbnail-item">
+                        <img th:src="@{/gallery/nature-4.jpg}" alt="Nature 4"/>
+                        <div class="thumbnail-info">
+                            <p>Curabitur ut lorem id tellus malesuada tincidunt et eget purus</p>
+                            <button class="btn btn-primary"><span class="fa fa-link"></span></button>
+                            <button class="btn btn-primary"><span class="fa fa-eye"></span></button>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-xs-3 mix cat_space cat_all">
+                    <a class="thumbnail-item">
+                        <img th:src="@{/gallery/space-2.jpg}" alt="Space 2"/>
+                        <div class="thumbnail-info">
+                            <p>Curabitur ut lorem id tellus malesuada tincidunt et eget purus</p>
+                            <button class="btn btn-primary"><span class="fa fa-link"></span></button>
+                            <button class="btn btn-primary"><span class="fa fa-eye"></span></button>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-xs-3 mix cat_nature cat_all">
+                    <a class="thumbnail-item">
+                        <img th:src="@{/gallery/nature-5.jpg}" alt="Nature 5"/>
+                        <div class="thumbnail-info">
+                            <p>Curabitur ut lorem id tellus malesuada tincidunt et eget purus</p>
+                            <button class="btn btn-primary"><span class="fa fa-link"></span></button>
+                            <button class="btn btn-primary"><span class="fa fa-eye"></span></button>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <ul class="pagination pagination-sm pull-right">
+                <li class="disabled"><a th:href="@{#}">«</a></li>
+                <li class="active"><a th:href="@{#}">1</a></li>
+                <li><a th:href="@{#}">2</a></li>
+                <li><a th:href="@{#}">3</a></li>
+                <li><a th:href="@{#}">4</a></li>
+                <li><a th:href="@{#}">»</a></li>
+            </ul>
+
+        </div>
+        <!-- ./page content holder -->
+    </div>
+    <!-- ./page content wrapper -->
+
+</div>
+<!-- ./page content -->
+
+<div layout:fragment="script">
+    <script type="text/javascript" th:src="@{/resources/js/front/actions.js}"></script>
+</div>
+
+</body>
+</html>
