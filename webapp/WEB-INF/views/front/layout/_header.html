@@ -6,7 +6,7 @@
 
         <!-- page logo -->
         <div class="logo">
-            <a th:href="/">Atlant - Front-end Template</a>
+            <a th:href="@{/}">Atlant - Front-end Template</a>
         </div>
         <!-- ./page logo -->
 
@@ -19,19 +19,19 @@
         <!-- navigation -->
         <ul class="navigation">
             <li>
-                <a th:th:href="@{/}">Home</a>
+                <a th:href="@{/}">Home</a>
             </li>
             <li>
-                <a th:th:href="@{/about-us'}">About Us</a>
+                <a th:href="@{/about-us'}">About Us</a>
             </li>
             <li>
-                <a th:th:href="@{/our-service}">Our Service</a>
+                <a th:href="@{/our-service}">Our Service</a>
             </li>
             <li>
-                <a th:th:href="@{/news-and-events}">News & Events</a>
+                <a th:href="@{/news-and-events}">News & Events</a>
             </li>
             <li>
-                <a th:th:href="@{/contacts}">Contact</a>
+                <a th:href="@{/contacts}">Contact</a>
             </li>
             <!--@if (Auth::check())-->
             <!--<li>
@@ -53,7 +53,7 @@
             <li>
                 <a th:href="@{/register}"><span class="fa fa-user"></span> Register</a>
             </li>
-            @endif
+            <!--@endif-->
         </ul>
         <!-- ./navigation -->
 
