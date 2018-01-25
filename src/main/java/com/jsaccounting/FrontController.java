@@ -7,7 +7,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class FrontController {
 
     @RequestMapping("/")
-    public String toString() {
-        return "front/index";
+    public String index() {
+        return getFullViewName("index");
     }
+
+    @RequestMapping("/about-us")
+    public String aboutUs() {
+        return getFullViewName("about-us");
+    }
+
+    // consider move it to abstract class
+    private String getFullViewName(String viewName){
+        return "front/".concat(viewName);
+    }
+
 }
