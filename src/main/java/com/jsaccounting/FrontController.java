@@ -26,6 +26,11 @@ public class FrontController {
         return getFullViewName("news-and-events");
     }
 
+    @RequestMapping("/contact")
+    public String contact() {
+        return getFullViewName("contact");
+    }
+
     // consider move it to abstract class
     private String getFullViewName(String viewName){
         return "front/".concat(viewName);
