@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class FrontController {
+public class FrontController extends AbstractBaseController {
 
     @RequestMapping("/")
     public String index() {
@@ -31,8 +31,7 @@ public class FrontController {
         return getFullViewName("contact");
     }
 
-    // consider move it to abstract class
-    private String getFullViewName(String viewName){
+    protected String getFullViewName(String viewName){
         return "front/".concat(viewName);
     }
 
