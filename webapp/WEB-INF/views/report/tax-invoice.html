@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Bokor" rel="stylesheet" />
+    <style type="text/css">
+
+        .page-break {
+            page-break-after: always;
+        }
+
+        #title-en{
+
+        }
+
+        .text-center{
+            text-align: center;
+        }
+
+        #table-invoice {
+            border-collapse: collapse;
+        }
+
+        #table-invoice th, #table-invoice td {
+            border: 1px solid black;
+            padding: 6px;
+        }
+
+        #table-invoice td.no-border {
+            border: none;
+        }
+
+        #table-invoice tr.invoice-item td {
+            border-top: none;
+            border-bottom: none;
+        }
+
+        #table-invoice tr.invoice-item.last-item td {
+            border-bottom: 1px solid black;
+        }
+
+        #table-invoice tr.min-height td {
+            padding-top: 15px;
+            padding-bottom: 90px;
+        }
+
+        #table-invoice, #table-invoice .min-height {
+            min-height: 50px;
+        }
+
+        .vattin-box{
+            display: inline-block;
+        }
+
+        .vattin-box > span{
+            display: inline-block;
+            padding: 1px 5px;
+            margin: 0;
+            margin-left: -1px;
+            border: 1px solid black;
+        }
+
+        .vattin-box > .space{
+            border: none;
+            padding: 1px 3px;
+        }
+
+        .text-center{
+            text-align: center;
+        }
+
+        .text-left{
+            text-align: left;
+        }
+
+        .text-right{
+            text-align: right;
+        }
+
+        .align-top {
+            vertical-align: top;
+        }
+
+        #signature-section {
+            margin-top: 100px;
+        }
+
+        .signature {
+            width: 50%;
+        }
+
+        .signature > div{
+            width: 80%;
+            margin: 0 auto;
+            border-top: 1px solid black;
+            padding-top: 10px;
+        }
+
+        #customer-info-table {
+            table-layout: fixed;
+            width: 100%;
+        }
+
+    </style>    </head>
+
+<body>
+
+<div id="header">
+
+    <div>
+        <div style="float: left;">
+        </div>
+
+        <div id="title-section" class="text-center" style="float: left;">
+            <h2 id="title-en">JS ACCOUNTING TAX SERVICES Co.,LTD</h2>
+        </div>
+    </div>
+
+    <div id="vattin-section" style="clear: both;">
+        <p><span style="display: inline-block; padding: 7px 5px;">The number of (VATTIN) :</span><span class="vattin-box"><span>K</span><span>0</span><span>0</span><span>8</span><span class="space"></span><span>9</span><span>0</span><span>1</span><span>6</span><span>3</span><span>9</span><span>6</span><span>9</span><span>3</span>
+            </span></p>
+        <div>
+            <table>
+                <tr>
+                    <td width="90px">Address</td>
+                    <td># 7 EOE1 62+10 Village Toul Kork Sangkat Toul Sangke Khan Roeusey Keo Province/City Phnom Penh Telphone : 012 555 937(Chinese) / 012 622 626 / 015 555 931
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+<hr />
+<div id="content-section">
+    <h2 class="text-center">Tax Invoice</h2>
+
+    <table id="customer-info-table">
+        <tr>
+            <td style="width: 30%">Customer:</td>
+            <td style="width: 45%"></td>
+            <td style="width: 25%" class="text-right">
+                Invoice Number : 00002
+            </td>
+        </tr>
+        <tr>
+            <td class="align-top">Company name/Customer:</td>
+            <td>YUMARK PACIFIC CAMBODIA CO.,LTD</td>
+            <td class="text-right align-top">
+                Date : 26-Jan-2018
+            </td>
+        </tr>
+        <tr>
+            <td>Customer's Address</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Telephone number</td>
+            <td>097 794 948</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>VATTIN</td>
+            <td colspan="2">
+                <span class="vattin-box"><span>K</span><span>0</span><span>0</span><span>8</span><span class="space"></span><span>9</span><span>0</span><span>1</span><span>6</span><span>3</span><span>9</span><span>6</span><span>9</span><span>3</span>
+                </span>
+            </td>
+        </tr>
+    </table>
+
+</div>
+
+<br />
+
+<table id="table-invoice" style="width: 700px">
+    <tr>
+        <th class="text-center">No</th>
+        <th class="text-center">Description</th>
+        <th class="text-center">Quantity</th>
+        <th class="text-center">Unit Price</th>
+        <th class="text-center">Amount</th>
+    </tr>
+    <tr class="invoice-item">
+        <td class="text-center">1</td>
+        <td class="text-center" style="font-family: 'Khmer Kampot'" th:utext="${test}"></td>
+        <td class="text-center">1.00</td>
+        <td class="text-center">$300.00</td>
+        <td class="text-center">300.00</td>
+    </tr>
+    <tr class="invoice-item">
+        <td class="text-center">1</td>
+        <td class="text-center">Tax Service charge for 09-2017</td>
+        <td class="text-center">1.00</td>
+        <td class="text-center">$300.00</td>
+        <td class="text-center">300.00</td>
+    </tr>
+    <tr class="invoice-item last-item">
+        <td class="text-center">1</td>
+        <td class="text-center">Tax Service charge for 09-2017</td>
+        <td class="text-center">1.00</td>
+        <td class="text-center">$300.00</td>
+        <td class="text-center">300.00</td>
+    </tr>
+    <tr>
+        <td class="no-border"></td>
+        <td class="no-border"></td>
+        <td colspan="2" class="text-right">Sub total</td>
+        <td class="text-right">$300.00</td>
+    </tr>
+    <tr>
+        <td class="no-border"></td>
+        <td class="no-border"></td>
+        <td colspan="2" class="text-right">VAT (20%)</td>
+        <td class="text-right">$30.00</td>
+    </tr>
+    <tr>
+        <td class="no-border"></td>
+        <td class="no-border"></td>
+        <td colspan="2" class="text-right">Grand total</td>
+        <td class="text-right">$330.00</td>
+    </tr>
+</table>
+
+
+<div id="signature-section">
+    <div class="signature text-center" style="float: left;">
+        <div>Customer's Signature Name</div>
+    </div>
+    <div class="signature text-center" style="float: right;">
+        <div>Seller's Signature Name</div>
+    </div>
+</div>
+</body>
+
+</html>

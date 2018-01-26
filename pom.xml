@@ -71,6 +71,13 @@
         </dependency>
         <!-- end thymeleaf dependencies -->
 
+        <!-- flying saucer pdf -->
+        <dependency>
+            <groupId>org.xhtmlrenderer</groupId>
+            <artifactId>flying-saucer-pdf</artifactId>
+            <version>9.1.11</version>
+        </dependency>
+
     </dependencies>
 
     <build>
