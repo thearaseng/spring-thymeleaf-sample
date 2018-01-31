@@ -71,6 +71,21 @@
         </dependency>
         <!-- end thymeleaf dependencies -->
 
+        <!-- Start PDF Report -->
+        <dependency>
+            <groupId>net.sf.jasperreports</groupId>
+            <artifactId>jasperreports</artifactId>
+            <version>6.5.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>3.14</version>
+        </dependency>
+        <!-- End PDF Report -->
+
+
     </dependencies>
 
     <build>
