@@ -21,7 +21,6 @@ public class ReportController extends AbstractBaseController {
 
         Map<String, String> map = new HashMap<>();
         map.put("test", "សួស្ដី");
-        map.put("test", "សួស្ដី");
 
         try {
             pdfGeneratorService.createPdf("report/tax-invoice", map);
