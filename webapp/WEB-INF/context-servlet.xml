@@ -17,7 +17,7 @@
     <context:annotation-config/>
     <mvc:annotation-driven/>
 
-    <mvc:resources mapping="/resources/**" location="/resources/" cache-period="31556926"/>
+    <mvc:resources mapping="/resources/**" location="classpath:/static/" cache-period="31556926"/>
 
     <!-- start thymeleaf bean config -->
     <bean id="templateResolver" class="org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver">
