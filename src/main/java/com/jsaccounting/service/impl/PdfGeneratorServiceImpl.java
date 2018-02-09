@@ -1,5 +1,6 @@
-package com.jsaccounting.service;
+package com.jsaccounting.service.impl;
 
+import com.jsaccounting.service.PdfGeneratorService;
 import com.lowagie.text.pdf.BaseFont;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,24 +12,25 @@ import org.xhtmlrenderer.pdf.ITextRenderer;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.net.URL;
-import java.util.Iterator;
 import java.util.Map;
-import java.util.UUID;
 
 @Service
-public class PdfGeneratorServiceImpl {
+public class PdfGeneratorServiceImpl implements PdfGeneratorService {
 
-    @Autowired
     private TemplateEngine templateEngine;
 
-    public void createPdf(String templateName, Map map) throws Exception {
+    @Autowired
+    public PdfGeneratorServiceImpl(TemplateEngine templateEngine) {
+        this.templateEngine = templateEngine;
+    }
+
+    @Override
+    public boolean createPdf(String templateName, Map map) throws Exception {
         Assert.notNull(templateName, "The templateName can not be null");
         Context ctx = new Context();
         if (map != null) {
-            Iterator itMap = map.entrySet().iterator();
-            while (itMap.hasNext()) {
-                Map.Entry pair = (Map.Entry) itMap.next();
+            for (Object o : map.entrySet()) {
+                Map.Entry pair = (Map.Entry) o;
                 ctx.setVariable(pair.getKey().toString(), pair.getValue());
             }
         }
@@ -61,6 +63,8 @@ public class PdfGeneratorServiceImpl {
                 } catch (IOException e) { /*ignore*/ }
             }
         }
+
+        return true;
     }
 
 }

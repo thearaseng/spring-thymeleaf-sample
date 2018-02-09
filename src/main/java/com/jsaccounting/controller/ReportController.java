@@ -1,7 +1,7 @@
 package com.jsaccounting.controller;
 
 import com.itextpdf.text.pdf.languages.LanguageProcessor;
-import com.jsaccounting.service.PdfGeneratorServiceImpl;
+import com.jsaccounting.service.impl.PdfGeneratorServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
