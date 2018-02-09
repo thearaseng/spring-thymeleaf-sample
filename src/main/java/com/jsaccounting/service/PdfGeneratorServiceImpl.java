@@ -37,7 +37,7 @@ public class PdfGeneratorServiceImpl {
         FileOutputStream os = null;
         String fileName = "test";
         try {
-            final File outputFile = File.createTempFile(fileName, ".pdf", new File("/Users/thearaseng/Downloads/test"));
+            final File outputFile = File.createTempFile(fileName, ".pdf", new File("D:\\User Profile\\Desktop\\theara"));
             os = new FileOutputStream(outputFile);
 
             /*URL fontUrl = getClass().getResource("ddfdf");
@@ -46,7 +46,7 @@ public class PdfGeneratorServiceImpl {
 
             ITextRenderer renderer = new ITextRenderer();
 
-            renderer.getFontResolver().addFont("/Users/thearaseng/Downloads/KhFonts220/Kh-Battambang.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+            renderer.getFontResolver().addFont("D:\\User Profile\\Desktop\\kh_battambang.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
 
             renderer.setDocumentFromString(processedHtml);
             renderer.layout();
