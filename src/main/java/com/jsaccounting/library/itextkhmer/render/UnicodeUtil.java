@@ -29,7 +29,7 @@ public class UnicodeUtil {
             loadVowelBelow();
         }
 
-        return vowelBelow.containsKey(key) ? Character.toString(unicodeChar((String) vowelBelow.get(key))) : key;
+        return vowelBelow.containsKey(key) ? Character.toString(unicodeChar(vowelBelow.get(key))) : key;
     }
 
     public static String getVowelAbove(String key) {
@@ -37,7 +37,7 @@ public class UnicodeUtil {
             loadVowelAbove();
         }
 
-        return vowelAbove.containsKey(key) ? Character.toString(unicodeChar((String) vowelAbove.get(key))) : key;
+        return vowelAbove.containsKey(key) ? Character.toString(unicodeChar(vowelAbove.get(key))) : key;
     }
 
     public static String change(String key) {
@@ -45,17 +45,17 @@ public class UnicodeUtil {
             loadChangeVowel();
         }
 
-        return changeVowel.containsKey(key) ? Character.toString(unicodeChar((String) changeVowel.get(key))) : key;
+        return changeVowel.containsKey(key) ? Character.toString(unicodeChar(changeVowel.get(key))) : key;
     }
 
     public static String getConsonantShifter(String key) {
         if (consonantShifter == null) {
-            consonantShifter = new LinkedHashMap();
+            consonantShifter = new LinkedHashMap<>();
             consonantShifter.put(getKey(unicodeChar("0x17C9")), "0xF0D4");
             consonantShifter.put(getKey(unicodeChar("0x17CA")), "0xF0DB");
         }
 
-        return consonantShifter.containsKey(key) ? Character.toString(unicodeChar((String) consonantShifter.get(key))) : key;
+        return consonantShifter.containsKey(key) ? Character.toString(unicodeChar(consonantShifter.get(key))) : key;
     }
 
     public static String getSubConsonant(String key) {
@@ -63,11 +63,11 @@ public class UnicodeUtil {
             loadConsonant();
         }
 
-        return subConsonant.containsKey(key) ? Character.toString(unicodeChar((String) subConsonant.get(key))) : key;
+        return subConsonant.containsKey(key) ? Character.toString(unicodeChar(subConsonant.get(key))) : key;
     }
 
     private static void loadConsonant() {
-        subConsonant = new LinkedHashMap();
+        subConsonant = new LinkedHashMap<>();
         subConsonant.put(getSubConsonantKey(unicodeChar("0x1780")), "0xF000");
         subConsonant.put(getSubConsonantKey(unicodeChar("0x1781")), "0xF001");
         subConsonant.put(getSubConsonantKey(unicodeChar("0x1782")), "0xF002");
@@ -103,14 +103,14 @@ public class UnicodeUtil {
     }
 
     private static void loadVowelBelow() {
-        vowelBelow = new LinkedHashMap();
+        vowelBelow = new LinkedHashMap<>();
         vowelBelow.put(getKey(unicodeChar("0x17BB")), "0xF0A3");
         vowelBelow.put(getKey(unicodeChar("0x17BC")), "0xF0A4");
         vowelBelow.put(getKey(unicodeChar("0x17BD")), "0xF0A5");
     }
 
     private static void loadVowelAbove() {
-        vowelAbove = new LinkedHashMap();
+        vowelAbove = new LinkedHashMap<>();
         vowelAbove.put(getKey(unicodeChar("0x17B7")), "0xF0A6");
         vowelAbove.put(getKey(unicodeChar("0x17B8")), "0xF0A7");
         vowelAbove.put(getKey(unicodeChar("0x17B9")), "0xF0A8");
@@ -118,7 +118,7 @@ public class UnicodeUtil {
     }
 
     private static void loadChangeVowel() {
-        changeVowel = new LinkedHashMap();
+        changeVowel = new LinkedHashMap<>();
         changeVowel.put(getKey(unicodeChar("0x17B7")), "0xF0CD");
         changeVowel.put(getKey(unicodeChar("0x17B8")), "0xF0CE");
         changeVowel.put(getKey(unicodeChar("0x17B9")), "0xF0CF");
