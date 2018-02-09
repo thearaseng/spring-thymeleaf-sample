@@ -6,6 +6,7 @@ import com.jsaccounting.library.itextkhmer.render.UnicodeRender;
 
 public class KhmerLigature implements LanguageProcessor {
 
+    @Override
     public String process(String s) {
         UnicodeRender khmerRender = new UnicodeRender();
         return BidiLine.processLTR(khmerRender.render(s), 2, 0);
