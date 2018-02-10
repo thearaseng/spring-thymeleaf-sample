@@ -1,4 +1,4 @@
-package com.jsaccounting.library;
+package com.jsaccounting.library.itextkhmer;
 
 import com.itextpdf.text.pdf.BidiLine;
 import com.itextpdf.text.pdf.languages.LanguageProcessor;
